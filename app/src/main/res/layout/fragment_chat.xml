@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_marginBottom="50dp"
+    android:layout_height="match_parent"
+    tools:context=".ChatFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/comment_item"
+        app:layout_constraintBottom_toTopOf="@id/enter_messege"/>
+    <EditText
+        android:id="@+id/enter_messege"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/comment_bg"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25sp"
+        android:hint="@string/write_a_comment"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintTop_toBottomOf="@id/Chat_recycler_view"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <ImageView
+        android:id="@+id/send_messege_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/send_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/enter_messege"
+        app:layout_constraintBottom_toBottomOf="@id/enter_messege"
+        android:layout_margin="28dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

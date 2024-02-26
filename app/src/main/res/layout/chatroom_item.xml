@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/chatroom_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/create_chat_room"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/person_img"
+        android:padding="8dp"
+        tools:text="ChatRoom Name"
+       android:layout_marginStart="50dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        tools:ignore="NotSibling" />
+    <TextView
+        android:id="@+id/chatroom_item_bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/create_chat_room"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chatroom_item_name"
+        android:padding="8dp"
+        tools:text="ChatRoom Name"
+        app:layout_constraintBottom_toBottomOf="@id/person_img"
+       android:layout_marginStart="50dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        tools:ignore="NotSibling" />
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/shape_for_framelayouts"
+        app:layout_constraintBottom_toBottomOf="@id/chatroom_item_name"
+        app:layout_constraintTop_toTopOf="@id/chatroom_item_name"
+        app:layout_constraintEnd_toStartOf="@id/chatroom_item_name"
+        >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/person_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="@id/chatroom_item_name"
+        android:src="@drawable/person_icon"
+        app:layout_constraintTop_toTopOf="@id/chatroom_item_name"
+        app:layout_constraintBottom_toBottomOf="@id/chatroom_item_bio"
+        >
+    </de.hdodenhof.circleimageview.CircleImageView>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/backround_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/post_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_image"
+            tools:text="Text Description" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toBottomOf="@id/post_text"
+            app:layout_constraintBottom_toTopOf="@id/post_like"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Author" />
+
+        <TextView
+            android:id="@+id/post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:layout_constraintTop_toBottomOf="@id/post_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Time" />
+
+        <ImageView
+            android:id="@+id/post_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toBottomOf="@id/author"
+            android:src="@drawable/like_icon_outlined"
+            app:layout_constraintBottom_toTopOf="@id/post_like_counter"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/post_like_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_like"
+            android:layout_marginStart="5dp"
+            android:visibility="visible"
+            tools:text="100" />
+
+        <ImageView
+            android:id="@+id/post_comment_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/comment_icon"
+            android:layout_marginStart="5dp"
+           app:layout_constraintBottom_toBottomOf="@id/post_like"
+            app:layout_constraintTop_toTopOf="@id/post_like"
+            app:layout_constraintStart_toEndOf="@id/post_like" />
+
+        <TextView
+            android:id="@+id/post_comment_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+           app:layout_constraintBottom_toBottomOf="@id/post_comment_icon"
+          app:layout_constraintTop_toTopOf="@id/post_comment_icon"
+            app:layout_constraintStart_toEndOf="@+id/post_comment_icon"
+            android:layout_marginStart="3dp"
+            tools:text="100" />
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/likes"
+              app:layout_constraintBottom_toBottomOf="parent"
+              android:layout_marginStart="5dp"
+              android:textSize="16sp"
+              app:layout_constraintStart_toEndOf="@id/post_like_counter">
+
+          </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
