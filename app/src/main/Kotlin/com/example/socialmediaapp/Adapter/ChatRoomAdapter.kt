@@ -20,7 +20,6 @@ class ChatRoomAdapter(options:FirestoreRecyclerOptions<ChatRoom>,val context:Con
     class ChatRoomViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
         val chatRoom_name:TextView=itemView.findViewById(R.id.chatroom_item_name)
         val chat_author_image:CircleImageView=itemView.findViewById(R.id.person_img)
-        val chat_author_bio:TextView=itemView.findViewById(R.id.chatroom_item_bio)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatRoomViewHolder {
@@ -31,7 +30,6 @@ class ChatRoomAdapter(options:FirestoreRecyclerOptions<ChatRoom>,val context:Con
 
     override fun onBindViewHolder(holder: ChatRoomViewHolder, position: Int, model: ChatRoom) {
         holder.chatRoom_name.text=model.name
-        holder.chat_author_bio.text=model.image.bio
         holder.chat_author_image.setImageURI(model.image.imageUrl.toUri())
 
 
